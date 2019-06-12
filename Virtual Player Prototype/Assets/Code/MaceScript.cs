@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class MaceScript : MonoBehaviour
 {
+    private Transform obj_trasform;
     bool toRight;
     bool toLeft;
 
+
+    private void Awake()
+    {
+        obj_trasform = this.transform;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -51,5 +57,13 @@ public class MaceScript : MonoBehaviour
         var v = gameObject.GetComponent<Rigidbody2D>().velocity;
         v =  Vector3.zero;
         gameObject.GetComponent<Rigidbody2D>().velocity = v;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "Mace")
+        {
+            Destroy(gameObject);
+        }
     }
 }
