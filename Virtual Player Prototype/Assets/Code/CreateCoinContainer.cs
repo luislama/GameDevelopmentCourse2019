@@ -19,7 +19,7 @@ public class CreateCoinContainer : MonoBehaviour
         count++;
         if( count==180 )
         {
-            Vector3 position = new Vector3(Random.Range(-20.0f, 20.0f), gameObject.transform.position.y, gameObject.transform.position.z);
+            Vector3 position = new Vector3(Random.Range(-17.0f, 17.0f), gameObject.transform.position.y, gameObject.transform.position.z);
             Instantiate(prefab_coin, position, Quaternion.identity);
             count = 0;
         }
