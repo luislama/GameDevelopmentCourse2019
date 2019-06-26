@@ -37,11 +37,11 @@ public class PlayerPhysicsController : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("run",false);
 
         }
-        if (Input.GetKeyDown("up") && canJump)
+        if (Input.GetKey("up") && canJump)
         {
             canJump = false;
             gameObject.GetComponent<Animator>().SetBool("run",false);
-            // gameObject.GetComponent<Animator>().SetBool("jump",true);
+            gameObject.GetComponent<Animator>().SetBool("jump",true);
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2( 0, 30000f * Time.deltaTime));
         }
     }
@@ -86,6 +86,7 @@ public class PlayerPhysicsController : MonoBehaviour
         {
             // gameObject.GetComponent<Animator>().SetBool("jump",false);
             canJump = true;
+            gameObject.GetComponent<Animator>().SetBool("jump",false);
         }
         else
         {
