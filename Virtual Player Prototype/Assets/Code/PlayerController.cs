@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
             canJump = false;
             if(gameObject.transform.position.y>0.0f)
             {
-                gameObject.transform.Translate(0.0f, -jump_y*Time.deltaTime, 0.0f);
+                gameObject.transform.Translate(0.0f, -3*jump_y*Time.deltaTime, 0.0f);
             }
         }
     }

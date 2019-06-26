@@ -16,15 +16,6 @@ public class CoinMechanics : MonoBehaviour
 
     }
 
-    // private void OnTriggerEnter2D(Collider2D other)
-    // {
-    //     Debug.Log("ASDASDASD");
-    //     if (other.gameObject.tag == "thing")
-    //     {
-    //         Debug.Log(" the object!!!!! ");
-    //         Destroy(this);
-    //     }
-    // }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.tag == "thing")
