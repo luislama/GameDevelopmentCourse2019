@@ -5,6 +5,7 @@ using UnityEngine;
 public class CreateMace : MonoBehaviour
 {
     public GameObject prefab_mace;
+
     int count = 0;
 
     // Start is called before the first frame update
